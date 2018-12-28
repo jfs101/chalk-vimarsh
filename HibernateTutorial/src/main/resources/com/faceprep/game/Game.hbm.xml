@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="com.faceprep.game.Game" table="GAME">
+    <id name="gameId" type="int">
+      <column name="GAME_ID" precision="5" scale="0" />
+      <generator class="assigned" />
+    </id>
+    <property name="gamename" type="string">
+      <column name="GAMENAME" length="50" not-null="true" />
+    </property>
+    <property name="createdBy" type="string">
+      <column name="CREATED_BY" length="50" not-null="true" />
+    </property>
+    <property name="boughtDate" type="date">
+      <column name="BOUGHT_DATE" length="7" not-null="true" />
+    </property>
+  </class>
+</hibernate-mapping>
